@@ -10,7 +10,7 @@ import (
 
 func main() {
 	// Set up authentication information.
-	auth := sasl.NewPlainClient("", "ratchapong.b5917501@gmail.com", "e575g73wk")
+	auth := sasl.NewPlainClient("", "username", "password")
 
 	// Connect to the server, authenticate, set the sender and recipient,
 	// and send the email all in one step.
@@ -19,7 +19,7 @@ func main() {
 		"Subject: discount Gophers!\r\n" +
 		"\r\n" +
 		"This is the email body.\r\n")
-	err := smtp.SendMail("smtp.gmail.com:587", auth, "ratchapong.b5917501@gmail.com", to, msg)
+	err := smtp.SendMail("5a179f8d.ngrok.io", auth, "ratchaopong@test.com", to, msg)
 	if err != nil {
 		log.Fatal(err)
 	}
