@@ -19,7 +19,7 @@ func main() {
 		"Subject: discount Gophers!\r\n" +
 		"\r\n" +
 		"This is the email body.\r\n")
-	err := smtp.SendMail("5a179f8d.ngrok.io", auth, "ratchaopong@test.com", to, msg)
+	err := smtp.SendMail("128.199.216.169:1025", auth, "ratchaopong@test.com", to, msg)
 	if err != nil {
 		log.Fatal(err)
 	}
